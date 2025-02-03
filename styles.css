@@ -1,0 +1,97 @@
+/* styles.css */
+:root {
+    --samsung-blue: #1428a0;
+    --hero-black: #000000;
+    --badge-white: #ffffff;
+    --accent-red: #e4002b;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background: var(--hero-black);
+    color: var(--badge-white);
+}
+
+header {
+    background: linear-gradient(90deg, var(--hero-black) 70%, var(--samsung-blue) 100%);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--accent-red);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribute space between items */
+    width: 100%; /* Ensure container takes full width */
+}
+
+.samsung-header-logo {
+    height: 40px;
+    margin-right: 10px; /* Space between Samsung logo and Smart Sense */
+}
+
+.smart-sense-logo {
+    height: 60px;
+    max-width: 50%; /* Or a specific pixel width if preferred */
+    margin-right: auto; /* Push to the center */
+}
+
+.header-right {
+    display: flex;
+    align-items: center; /* Vertically center items */
+}
+
+.legacy-badge {
+    background: var(--accent-red);
+    padding: 10px 20px;
+    border-radius: 5px;
+    animation: pulse 2s infinite;
+}
+
+.timeline {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.timeline-item {
+    background: rgba(20, 40, 160, 0.2);
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 4px solid var(--accent-red);
+}
+
+.leader-card {
+    border: 2px solid var(--samsung-blue);
+    padding: 30px;
+    margin: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.leader-card::before {
+    content: "SAMSUNG WARRIOR";
+    position: absolute;
+    top: -15px;
+    left: -50px;
+    background: var(--accent-red);
+    transform: rotate(-45deg);
+    padding: 5px 50px;
+    font-size: 0.8rem;
+}
+
+.power-logo {
+    width: 50px;
+    height: auto;
+    margin-top: 10px;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
